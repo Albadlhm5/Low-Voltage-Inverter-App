@@ -351,7 +351,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="overvoltatgeProtectionSpinBox">
+              <widget class="QDoubleSpinBox" name="overvoltageProtectionSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -532,7 +532,7 @@ QProgressBar#identificationProgressBar::chunk {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_5">
              <item>
-              <widget class="QFrame" name="MonitoringPlotFrame">
+              <widget class="QFrame" name="plotFrame">
                <property name="frameShape">
                 <enum>QFrame::Shape::StyledPanel</enum>
                </property>
@@ -757,7 +757,7 @@ QProgressBar#identificationProgressBar::chunk {
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>33</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

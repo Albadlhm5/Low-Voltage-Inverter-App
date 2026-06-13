@@ -17,15 +17,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QDoubleSpinBox, QFormLayout,
     QFrame, QGroupBox, QHBoxLayout, QLabel,
-    QMainWindow, QMenuBar, QPlainTextEdit, QProgressBar,
-    QPushButton, QSizePolicy, QStatusBar, QVBoxLayout,
-    QWidget)
+    QLineEdit, QMainWindow, QMenuBar, QPlainTextEdit,
+    QProgressBar, QPushButton, QSizePolicy, QStatusBar,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(800, 662)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"QPushButton {\n"
@@ -141,44 +141,44 @@ class Ui_MainWindow(object):
 
         self.formLayout.setWidget(0, QFormLayout.ItemRole.LabelRole, self.label)
 
-        self.doubleSpinBox = QDoubleSpinBox(self.groupBox_9)
-        self.doubleSpinBox.setObjectName(u"doubleSpinBox")
-        self.doubleSpinBox.setMaximumSize(QSize(80, 16777215))
+        self.dcVoltageSpinBox = QDoubleSpinBox(self.groupBox_9)
+        self.dcVoltageSpinBox.setObjectName(u"dcVoltageSpinBox")
+        self.dcVoltageSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout.setWidget(0, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox)
+        self.formLayout.setWidget(0, QFormLayout.ItemRole.FieldRole, self.dcVoltageSpinBox)
 
         self.label_2 = QLabel(self.groupBox_9)
         self.label_2.setObjectName(u"label_2")
 
         self.formLayout.setWidget(1, QFormLayout.ItemRole.LabelRole, self.label_2)
 
-        self.doubleSpinBox_2 = QDoubleSpinBox(self.groupBox_9)
-        self.doubleSpinBox_2.setObjectName(u"doubleSpinBox_2")
-        self.doubleSpinBox_2.setMaximumSize(QSize(80, 16777215))
+        self.currentLimitPeakSpinBox = QDoubleSpinBox(self.groupBox_9)
+        self.currentLimitPeakSpinBox.setObjectName(u"currentLimitPeakSpinBox")
+        self.currentLimitPeakSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_2)
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.currentLimitPeakSpinBox)
 
         self.label_3 = QLabel(self.groupBox_9)
         self.label_3.setObjectName(u"label_3")
 
         self.formLayout.setWidget(2, QFormLayout.ItemRole.LabelRole, self.label_3)
 
-        self.doubleSpinBox_3 = QDoubleSpinBox(self.groupBox_9)
-        self.doubleSpinBox_3.setObjectName(u"doubleSpinBox_3")
-        self.doubleSpinBox_3.setMaximumSize(QSize(80, 16777215))
+        self.speedLimitSpinBox = QDoubleSpinBox(self.groupBox_9)
+        self.speedLimitSpinBox.setObjectName(u"speedLimitSpinBox")
+        self.speedLimitSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout.setWidget(2, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_3)
+        self.formLayout.setWidget(2, QFormLayout.ItemRole.FieldRole, self.speedLimitSpinBox)
 
         self.label_4 = QLabel(self.groupBox_9)
         self.label_4.setObjectName(u"label_4")
 
         self.formLayout.setWidget(3, QFormLayout.ItemRole.LabelRole, self.label_4)
 
-        self.doubleSpinBox_4 = QDoubleSpinBox(self.groupBox_9)
-        self.doubleSpinBox_4.setObjectName(u"doubleSpinBox_4")
-        self.doubleSpinBox_4.setMaximumSize(QSize(80, 16777215))
+        self.polePairsSpinBox = QDoubleSpinBox(self.groupBox_9)
+        self.polePairsSpinBox.setObjectName(u"polePairsSpinBox")
+        self.polePairsSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout.setWidget(3, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_4)
+        self.formLayout.setWidget(3, QFormLayout.ItemRole.FieldRole, self.polePairsSpinBox)
 
 
         self.verticalLayout_2.addWidget(self.groupBox_9)
@@ -207,29 +207,29 @@ class Ui_MainWindow(object):
 
         self.formLayout_2.setWidget(3, QFormLayout.ItemRole.LabelRole, self.label_8)
 
-        self.doubleSpinBox_5 = QDoubleSpinBox(self.groupBox_8)
-        self.doubleSpinBox_5.setObjectName(u"doubleSpinBox_5")
-        self.doubleSpinBox_5.setMaximumSize(QSize(80, 16777215))
+        self.dAxisCurrentRefSpinBox = QDoubleSpinBox(self.groupBox_8)
+        self.dAxisCurrentRefSpinBox.setObjectName(u"dAxisCurrentRefSpinBox")
+        self.dAxisCurrentRefSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_2.setWidget(0, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_5)
+        self.formLayout_2.setWidget(0, QFormLayout.ItemRole.FieldRole, self.dAxisCurrentRefSpinBox)
 
-        self.doubleSpinBox_6 = QDoubleSpinBox(self.groupBox_8)
-        self.doubleSpinBox_6.setObjectName(u"doubleSpinBox_6")
-        self.doubleSpinBox_6.setMaximumSize(QSize(80, 16777215))
+        self.qAxisCurrentRefSpinBox = QDoubleSpinBox(self.groupBox_8)
+        self.qAxisCurrentRefSpinBox.setObjectName(u"qAxisCurrentRefSpinBox")
+        self.qAxisCurrentRefSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_2.setWidget(1, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_6)
+        self.formLayout_2.setWidget(1, QFormLayout.ItemRole.FieldRole, self.qAxisCurrentRefSpinBox)
 
-        self.doubleSpinBox_7 = QDoubleSpinBox(self.groupBox_8)
-        self.doubleSpinBox_7.setObjectName(u"doubleSpinBox_7")
-        self.doubleSpinBox_7.setMaximumSize(QSize(80, 16777215))
+        self.currentKpSpinBox = QDoubleSpinBox(self.groupBox_8)
+        self.currentKpSpinBox.setObjectName(u"currentKpSpinBox")
+        self.currentKpSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_2.setWidget(2, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_7)
+        self.formLayout_2.setWidget(2, QFormLayout.ItemRole.FieldRole, self.currentKpSpinBox)
 
-        self.doubleSpinBox_8 = QDoubleSpinBox(self.groupBox_8)
-        self.doubleSpinBox_8.setObjectName(u"doubleSpinBox_8")
-        self.doubleSpinBox_8.setMaximumSize(QSize(80, 16777215))
+        self.currentKiSpinBox = QDoubleSpinBox(self.groupBox_8)
+        self.currentKiSpinBox.setObjectName(u"currentKiSpinBox")
+        self.currentKiSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_2.setWidget(3, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_8)
+        self.formLayout_2.setWidget(3, QFormLayout.ItemRole.FieldRole, self.currentKiSpinBox)
 
 
         self.verticalLayout_2.addWidget(self.groupBox_8)
@@ -258,29 +258,29 @@ class Ui_MainWindow(object):
 
         self.formLayout_3.setWidget(3, QFormLayout.ItemRole.LabelRole, self.label_12)
 
-        self.doubleSpinBox_9 = QDoubleSpinBox(self.groupBox_7)
-        self.doubleSpinBox_9.setObjectName(u"doubleSpinBox_9")
-        self.doubleSpinBox_9.setMaximumSize(QSize(80, 16777215))
+        self.overcurrentProtectionSpinBox = QDoubleSpinBox(self.groupBox_7)
+        self.overcurrentProtectionSpinBox.setObjectName(u"overcurrentProtectionSpinBox")
+        self.overcurrentProtectionSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_3.setWidget(0, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_9)
+        self.formLayout_3.setWidget(0, QFormLayout.ItemRole.FieldRole, self.overcurrentProtectionSpinBox)
 
-        self.doubleSpinBox_10 = QDoubleSpinBox(self.groupBox_7)
-        self.doubleSpinBox_10.setObjectName(u"doubleSpinBox_10")
-        self.doubleSpinBox_10.setMaximumSize(QSize(80, 16777215))
+        self.undervoltageProtectionSpinBox = QDoubleSpinBox(self.groupBox_7)
+        self.undervoltageProtectionSpinBox.setObjectName(u"undervoltageProtectionSpinBox")
+        self.undervoltageProtectionSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_3.setWidget(2, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_10)
+        self.formLayout_3.setWidget(2, QFormLayout.ItemRole.FieldRole, self.undervoltageProtectionSpinBox)
 
-        self.doubleSpinBox_11 = QDoubleSpinBox(self.groupBox_7)
-        self.doubleSpinBox_11.setObjectName(u"doubleSpinBox_11")
-        self.doubleSpinBox_11.setMaximumSize(QSize(80, 16777215))
+        self.overvoltageProtectionSpinBox = QDoubleSpinBox(self.groupBox_7)
+        self.overvoltageProtectionSpinBox.setObjectName(u"overvoltageProtectionSpinBox")
+        self.overvoltageProtectionSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_3.setWidget(1, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_11)
+        self.formLayout_3.setWidget(1, QFormLayout.ItemRole.FieldRole, self.overvoltageProtectionSpinBox)
 
-        self.doubleSpinBox_12 = QDoubleSpinBox(self.groupBox_7)
-        self.doubleSpinBox_12.setObjectName(u"doubleSpinBox_12")
-        self.doubleSpinBox_12.setMaximumSize(QSize(80, 16777215))
+        self.temperatureLimitSpinBox = QDoubleSpinBox(self.groupBox_7)
+        self.temperatureLimitSpinBox.setObjectName(u"temperatureLimitSpinBox")
+        self.temperatureLimitSpinBox.setMaximumSize(QSize(80, 16777215))
 
-        self.formLayout_3.setWidget(3, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_12)
+        self.formLayout_3.setWidget(3, QFormLayout.ItemRole.FieldRole, self.temperatureLimitSpinBox)
 
 
         self.verticalLayout_2.addWidget(self.groupBox_7)
@@ -318,33 +318,33 @@ class Ui_MainWindow(object):
         self.groupBox_13.setObjectName(u"groupBox_13")
         self.verticalLayout_4 = QVBoxLayout(self.groupBox_13)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.comboBox = QComboBox(self.groupBox_13)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.signal1ComboBox = QComboBox(self.groupBox_13)
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.addItem("")
+        self.signal1ComboBox.setObjectName(u"signal1ComboBox")
 
-        self.verticalLayout_4.addWidget(self.comboBox)
+        self.verticalLayout_4.addWidget(self.signal1ComboBox)
 
-        self.comboBox_2 = QComboBox(self.groupBox_13)
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.signal2ComboBox = QComboBox(self.groupBox_13)
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.addItem("")
+        self.signal2ComboBox.setObjectName(u"signal2ComboBox")
 
-        self.verticalLayout_4.addWidget(self.comboBox_2)
+        self.verticalLayout_4.addWidget(self.signal2ComboBox)
 
 
         self.verticalLayout_3.addWidget(self.groupBox_13)
@@ -353,12 +353,12 @@ class Ui_MainWindow(object):
         self.groupBox_12.setObjectName(u"groupBox_12")
         self.verticalLayout_5 = QVBoxLayout(self.groupBox_12)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.MonitoringPlotFrame = QFrame(self.groupBox_12)
-        self.MonitoringPlotFrame.setObjectName(u"MonitoringPlotFrame")
-        self.MonitoringPlotFrame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.MonitoringPlotFrame.setFrameShadow(QFrame.Shadow.Raised)
+        self.plotFrame = QFrame(self.groupBox_12)
+        self.plotFrame.setObjectName(u"plotFrame")
+        self.plotFrame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.plotFrame.setFrameShadow(QFrame.Shadow.Raised)
 
-        self.verticalLayout_5.addWidget(self.MonitoringPlotFrame)
+        self.verticalLayout_5.addWidget(self.plotFrame)
 
 
         self.verticalLayout_3.addWidget(self.groupBox_12)
@@ -389,10 +389,10 @@ class Ui_MainWindow(object):
         self.groupBox_10.setObjectName(u"groupBox_10")
         self.verticalLayout_6 = QVBoxLayout(self.groupBox_10)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.plainTextEdit = QPlainTextEdit(self.groupBox_10)
-        self.plainTextEdit.setObjectName(u"plainTextEdit")
+        self.logPlainTextEdit = QPlainTextEdit(self.groupBox_10)
+        self.logPlainTextEdit.setObjectName(u"logPlainTextEdit")
 
-        self.verticalLayout_6.addWidget(self.plainTextEdit)
+        self.verticalLayout_6.addWidget(self.logPlainTextEdit)
 
 
         self.verticalLayout_3.addWidget(self.groupBox_10)
@@ -414,63 +414,39 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.widget = QWidget(self.groupBox_15)
         self.widget.setObjectName(u"widget")
-        self.verticalLayout_9 = QVBoxLayout(self.widget)
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.label_13 = QLabel(self.widget)
-        self.label_13.setObjectName(u"label_13")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
-        self.label_13.setSizePolicy(sizePolicy)
-        self.label_13.setWordWrap(True)
+        self.horizontalLayout_5 = QHBoxLayout(self.widget)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.modeComboBox = QComboBox(self.widget)
+        self.modeComboBox.addItem("")
+        self.modeComboBox.addItem("")
+        self.modeComboBox.setObjectName(u"modeComboBox")
 
-        self.verticalLayout_9.addWidget(self.label_13)
+        self.horizontalLayout_5.addWidget(self.modeComboBox)
+
+        self.modeValueSpinBox = QDoubleSpinBox(self.widget)
+        self.modeValueSpinBox.setObjectName(u"modeValueSpinBox")
+
+        self.horizontalLayout_5.addWidget(self.modeValueSpinBox)
 
 
         self.verticalLayout_8.addWidget(self.widget)
 
         self.widget_2 = QWidget(self.groupBox_15)
         self.widget_2.setObjectName(u"widget_2")
-        self.formLayout_5 = QFormLayout(self.widget_2)
-        self.formLayout_5.setObjectName(u"formLayout_5")
-        self.doubleSpinBox_13 = QDoubleSpinBox(self.widget_2)
-        self.doubleSpinBox_13.setObjectName(u"doubleSpinBox_13")
+        self.horizontalLayout_6 = QHBoxLayout(self.widget_2)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.runButton = QPushButton(self.widget_2)
+        self.runButton.setObjectName(u"runButton")
 
-        self.formLayout_5.setWidget(0, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_13)
+        self.horizontalLayout_6.addWidget(self.runButton)
 
-        self.doubleSpinBox_14 = QDoubleSpinBox(self.widget_2)
-        self.doubleSpinBox_14.setObjectName(u"doubleSpinBox_14")
+        self.stopModeButton = QPushButton(self.widget_2)
+        self.stopModeButton.setObjectName(u"stopModeButton")
 
-        self.formLayout_5.setWidget(1, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_14)
-
-        self.doubleSpinBox_15 = QDoubleSpinBox(self.widget_2)
-        self.doubleSpinBox_15.setObjectName(u"doubleSpinBox_15")
-
-        self.formLayout_5.setWidget(2, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_15)
-
-        self.label_19 = QLabel(self.widget_2)
-        self.label_19.setObjectName(u"label_19")
-
-        self.formLayout_5.setWidget(2, QFormLayout.ItemRole.LabelRole, self.label_19)
-
-        self.label_18 = QLabel(self.widget_2)
-        self.label_18.setObjectName(u"label_18")
-
-        self.formLayout_5.setWidget(1, QFormLayout.ItemRole.LabelRole, self.label_18)
-
-        self.label_17 = QLabel(self.widget_2)
-        self.label_17.setObjectName(u"label_17")
-
-        self.formLayout_5.setWidget(0, QFormLayout.ItemRole.LabelRole, self.label_17)
+        self.horizontalLayout_6.addWidget(self.stopModeButton)
 
 
         self.verticalLayout_8.addWidget(self.widget_2)
-
-        self.startIdentificationButton = QPushButton(self.groupBox_15)
-        self.startIdentificationButton.setObjectName(u"startIdentificationButton")
-
-        self.verticalLayout_8.addWidget(self.startIdentificationButton)
 
 
         self.verticalLayout_7.addWidget(self.groupBox_15)
@@ -479,10 +455,10 @@ class Ui_MainWindow(object):
         self.groupBox_16.setObjectName(u"groupBox_16")
         self.verticalLayout_10 = QVBoxLayout(self.groupBox_16)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.label_14 = QLabel(self.groupBox_16)
-        self.label_14.setObjectName(u"label_14")
+        self.identificationStatusLabel = QLabel(self.groupBox_16)
+        self.identificationStatusLabel.setObjectName(u"identificationStatusLabel")
 
-        self.verticalLayout_10.addWidget(self.label_14)
+        self.verticalLayout_10.addWidget(self.identificationStatusLabel)
 
         self.identificationProgressBar = QProgressBar(self.groupBox_16)
         self.identificationProgressBar.setObjectName(u"identificationProgressBar")
@@ -502,11 +478,6 @@ class Ui_MainWindow(object):
 
         self.formLayout_4.setWidget(0, QFormLayout.ItemRole.LabelRole, self.label_15)
 
-        self.doubleSpinBox_16 = QDoubleSpinBox(self.groupBox_17)
-        self.doubleSpinBox_16.setObjectName(u"doubleSpinBox_16")
-
-        self.formLayout_4.setWidget(0, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_16)
-
         self.label_16 = QLabel(self.groupBox_17)
         self.label_16.setObjectName(u"label_16")
 
@@ -517,15 +488,20 @@ class Ui_MainWindow(object):
 
         self.formLayout_4.setWidget(2, QFormLayout.ItemRole.LabelRole, self.label_20)
 
-        self.doubleSpinBox_17 = QDoubleSpinBox(self.groupBox_17)
-        self.doubleSpinBox_17.setObjectName(u"doubleSpinBox_17")
+        self.rsLineEdit = QLineEdit(self.groupBox_17)
+        self.rsLineEdit.setObjectName(u"rsLineEdit")
 
-        self.formLayout_4.setWidget(1, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_17)
+        self.formLayout_4.setWidget(0, QFormLayout.ItemRole.FieldRole, self.rsLineEdit)
 
-        self.doubleSpinBox_18 = QDoubleSpinBox(self.groupBox_17)
-        self.doubleSpinBox_18.setObjectName(u"doubleSpinBox_18")
+        self.ldLineEdit = QLineEdit(self.groupBox_17)
+        self.ldLineEdit.setObjectName(u"ldLineEdit")
 
-        self.formLayout_4.setWidget(2, QFormLayout.ItemRole.FieldRole, self.doubleSpinBox_18)
+        self.formLayout_4.setWidget(1, QFormLayout.ItemRole.FieldRole, self.ldLineEdit)
+
+        self.lqLineEdit = QLineEdit(self.groupBox_17)
+        self.lqLineEdit.setObjectName(u"lqLineEdit")
+
+        self.formLayout_4.setWidget(2, QFormLayout.ItemRole.FieldRole, self.lqLineEdit)
 
 
         self.verticalLayout_7.addWidget(self.groupBox_17)
@@ -534,10 +510,10 @@ class Ui_MainWindow(object):
         self.groupBox_14.setObjectName(u"groupBox_14")
         self.horizontalLayout_4 = QHBoxLayout(self.groupBox_14)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.applyParametersButton = QPushButton(self.groupBox_14)
-        self.applyParametersButton.setObjectName(u"applyParametersButton")
+        self.startIdentificationButton = QPushButton(self.groupBox_14)
+        self.startIdentificationButton.setObjectName(u"startIdentificationButton")
 
-        self.horizontalLayout_4.addWidget(self.applyParametersButton)
+        self.horizontalLayout_4.addWidget(self.startIdentificationButton)
 
         self.stopIdentificationButton = QPushButton(self.groupBox_14)
         self.stopIdentificationButton.setObjectName(u"stopIdentificationButton")
@@ -547,12 +523,21 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.groupBox_14)
 
+        self.verticalLayout_9 = QVBoxLayout()
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.applyParametersButton = QPushButton(self.groupBox_3)
+        self.applyParametersButton.setObjectName(u"applyParametersButton")
+
+        self.verticalLayout_9.addWidget(self.applyParametersButton)
+
+
+        self.verticalLayout_7.addLayout(self.verticalLayout_9)
+
 
         self.horizontalLayout.addWidget(self.groupBox_3)
 
         self.horizontalLayout.setStretch(0, 2)
         self.horizontalLayout.setStretch(1, 4)
-        self.horizontalLayout.setStretch(2, 2)
 
         self.verticalLayout.addWidget(self.groupBox_2)
 
@@ -573,84 +558,79 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Main Area", None))
-        self.groupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Parameter Settings", None))
+        self.groupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Parameters", None))
         self.groupBox_9.setTitle(QCoreApplication.translate("MainWindow", u"Inverter Input", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"DC Voltage", None))
-        self.doubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
+        self.dcVoltageSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Current Limit (Peak)", None))
-        self.doubleSpinBox_2.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"PWM Frequency", None))
-        self.doubleSpinBox_3.setSuffix(QCoreApplication.translate("MainWindow", u" kHz", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Control Frequency", None))
-        self.doubleSpinBox_4.setSuffix(QCoreApplication.translate("MainWindow", u" kHz", None))
-        self.groupBox_8.setTitle(QCoreApplication.translate("MainWindow", u"Control Parameters", None))
+        self.currentLimitPeakSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Speed Limit", None))
+        self.speedLimitSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" rpm", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Pole Pairs (PP)", None))
+        self.polePairsSpinBox.setSuffix("")
+        self.groupBox_8.setTitle(QCoreApplication.translate("MainWindow", u"Inverter Output", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"d-axis current ref.", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"q-axis current ref.", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Current Kp", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Current Ki", None))
-        self.doubleSpinBox_5.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
+        self.dAxisCurrentRefSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
         self.groupBox_7.setTitle(QCoreApplication.translate("MainWindow", u"Protection Settings ", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Overcurrent Protection", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Overvoltage Protection", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Undervoltage Protection", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Temperature Limit", None))
-        self.doubleSpinBox_9.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
-        self.doubleSpinBox_10.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
-        self.doubleSpinBox_11.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
-        self.doubleSpinBox_12.setSuffix(QCoreApplication.translate("MainWindow", u" \u00baC", None))
+        self.overcurrentProtectionSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
+        self.undervoltageProtectionSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
+        self.overvoltageProtectionSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
+        self.temperatureLimitSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" \u03a9", None))
         self.groupBox_6.setTitle(QCoreApplication.translate("MainWindow", u"Actions", None))
         self.connectButton.setText(QCoreApplication.translate("MainWindow", u"Connect", None))
         self.defaultsButton.setText(QCoreApplication.translate("MainWindow", u"Deafaults", None))
         self.disconnectButton.setText(QCoreApplication.translate("MainWindow", u"Disconnect", None))
         self.groupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Monitoring", None))
-        self.groupBox_13.setTitle(QCoreApplication.translate("MainWindow", u"Signal Selection", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Signal 1", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"DC Bus Voltage (V)", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"d-axis Current (A)", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"q-axis Current (A)", None))
-        self.comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Phase A Current (A)", None))
-        self.comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Phase B Current (A)", None))
-        self.comboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Phase C Current (A)", None))
-        self.comboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Temperature (\u00baC)", None))
-        self.comboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Duty Cycle (%)", None))
+        self.groupBox_13.setTitle(QCoreApplication.translate("MainWindow", u"Signals", None))
+        self.signal1ComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Signal 1", None))
+        self.signal1ComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"DC Bus Voltage (V)", None))
+        self.signal1ComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"d-axis Current (A)", None))
+        self.signal1ComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"q-axis Current (A)", None))
+        self.signal1ComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Phase A Current (A)", None))
+        self.signal1ComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Phase B Current (A)", None))
+        self.signal1ComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Phase C Current (A)", None))
+        self.signal1ComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Temperature (\u00baC)", None))
+        self.signal1ComboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Duty Cycle (%)", None))
 
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Signal 2", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"DC Bus Voltage (V)", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"d-axis Current (A)", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"q-axis Current (A)", None))
-        self.comboBox_2.setItemText(4, QCoreApplication.translate("MainWindow", u"Phase A Current (A)", None))
-        self.comboBox_2.setItemText(5, QCoreApplication.translate("MainWindow", u"Phase B Current (A)", None))
-        self.comboBox_2.setItemText(6, QCoreApplication.translate("MainWindow", u"Phase C Current (A)", None))
-        self.comboBox_2.setItemText(7, QCoreApplication.translate("MainWindow", u"Temperature (\u00baC)", None))
-        self.comboBox_2.setItemText(8, QCoreApplication.translate("MainWindow", u"Duty Cycle (%)", None))
+        self.signal2ComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Signal 2", None))
+        self.signal2ComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"DC Bus Voltage (V)", None))
+        self.signal2ComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"d-axis Current (A)", None))
+        self.signal2ComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"q-axis Current (A)", None))
+        self.signal2ComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Phase A Current (A)", None))
+        self.signal2ComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Phase B Current (A)", None))
+        self.signal2ComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Phase C Current (A)", None))
+        self.signal2ComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Temperature (\u00baC)", None))
+        self.signal2ComboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Duty Cycle (%)", None))
 
         self.groupBox_12.setTitle(QCoreApplication.translate("MainWindow", u"Plot Area", None))
-        self.groupBox_11.setTitle(QCoreApplication.translate("MainWindow", u"Streaming Actions", None))
+        self.groupBox_11.setTitle(QCoreApplication.translate("MainWindow", u"Stream Control", None))
         self.startButton.setText(QCoreApplication.translate("MainWindow", u"Start ", None))
         self.stopButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
         self.exportButton.setText(QCoreApplication.translate("MainWindow", u"Export ", None))
         self.groupBox_10.setTitle(QCoreApplication.translate("MainWindow", u"Log", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Machine Identification", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Identification", None))
         self.groupBox_15.setTitle(QCoreApplication.translate("MainWindow", u"Identification Setup", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"\u26a0 Ensure inverter is powered.", None))
-        self.doubleSpinBox_13.setSuffix(QCoreApplication.translate("MainWindow", u" A", None))
-        self.doubleSpinBox_14.setSuffix(QCoreApplication.translate("MainWindow", u" Hz", None))
-        self.doubleSpinBox_15.setSuffix(QCoreApplication.translate("MainWindow", u" s", None))
-        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Hold Time", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"Test Freq.", None))
-        self.label_17.setText(QCoreApplication.translate("MainWindow", u"Rs Test ", None))
-        self.startIdentificationButton.setText(QCoreApplication.translate("MainWindow", u"Start Identification", None))
+        self.modeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Torque", None))
+        self.modeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Speed", None))
+
+        self.runButton.setText(QCoreApplication.translate("MainWindow", u"Run", None))
+        self.stopModeButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
         self.groupBox_16.setTitle(QCoreApplication.translate("MainWindow", u"Identification Status", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Running...", None))
+        self.identificationStatusLabel.setText(QCoreApplication.translate("MainWindow", u"Running...", None))
         self.groupBox_17.setTitle(QCoreApplication.translate("MainWindow", u"Estimated Parameters", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Rs", None))
-        self.doubleSpinBox_16.setSuffix(QCoreApplication.translate("MainWindow", u" m\u03a9", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Ld", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"Lq", None))
-        self.doubleSpinBox_17.setSuffix(QCoreApplication.translate("MainWindow", u" \u00b5H", None))
-        self.doubleSpinBox_18.setSuffix(QCoreApplication.translate("MainWindow", u" \u00b5H", None))
         self.groupBox_14.setTitle(QCoreApplication.translate("MainWindow", u"Actions", None))
+        self.startIdentificationButton.setText(QCoreApplication.translate("MainWindow", u"Start", None))
+        self.stopIdentificationButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
         self.applyParametersButton.setText(QCoreApplication.translate("MainWindow", u"Apply Parameters", None))
-        self.stopIdentificationButton.setText(QCoreApplication.translate("MainWindow", u"Stop Identification", None))
     # retranslateUi
 
