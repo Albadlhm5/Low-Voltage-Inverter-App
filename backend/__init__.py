@@ -1,0 +1,1 @@
+from .inversor_simulado import InversorSimulado, ParametresEstimats
