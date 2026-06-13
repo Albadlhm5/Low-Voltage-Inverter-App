@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>662</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -135,7 +135,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox">
+              <widget class="QDoubleSpinBox" name="dcVoltageSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -155,7 +155,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+              <widget class="QDoubleSpinBox" name="currentLimitPeakSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -175,7 +175,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+              <widget class="QDoubleSpinBox" name="speedLimitSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -195,7 +195,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="3" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
+              <widget class="QDoubleSpinBox" name="polePairsSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -203,7 +203,7 @@ QProgressBar#identificationProgressBar::chunk {
                 </size>
                </property>
                <property name="suffix">
-                <string> </string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -245,7 +245,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_5">
+              <widget class="QDoubleSpinBox" name="dAxisCurrentRefSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -258,7 +258,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_6">
+              <widget class="QDoubleSpinBox" name="qAxisCurrentRefSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -268,7 +268,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_7">
+              <widget class="QDoubleSpinBox" name="currentKpSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -278,7 +278,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="3" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_8">
+              <widget class="QDoubleSpinBox" name="currentKiSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -325,7 +325,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_9">
+              <widget class="QDoubleSpinBox" name="overcurrentProtectionSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -338,7 +338,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="2" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_10">
+              <widget class="QDoubleSpinBox" name="undervoltageProtectionSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -351,7 +351,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_11">
+              <widget class="QDoubleSpinBox" name="overvoltatgeProtectionSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -364,7 +364,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="3" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_12">
+              <widget class="QDoubleSpinBox" name="temperatureLimitSpinBox">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -425,7 +425,7 @@ QProgressBar#identificationProgressBar::chunk {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
-              <widget class="QComboBox" name="comboBox">
+              <widget class="QComboBox" name="signal1ComboBox">
                <item>
                 <property name="text">
                  <string>Select Signal 1</string>
@@ -474,7 +474,7 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_2">
+              <widget class="QComboBox" name="signal2ComboBox">
                <item>
                 <property name="text">
                  <string>Select Signal 2</string>
@@ -581,7 +581,7 @@ QProgressBar#identificationProgressBar::chunk {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_6">
              <item>
-              <widget class="QPlainTextEdit" name="plainTextEdit"/>
+              <widget class="QPlainTextEdit" name="logPlainTextEdit"/>
              </item>
             </layout>
            </widget>
@@ -654,7 +654,7 @@ QProgressBar#identificationProgressBar::chunk {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_10">
              <item>
-              <widget class="QLabel" name="label_14">
+              <widget class="QLabel" name="identificationStatusLabel">
                <property name="text">
                 <string>Running...</string>
                </property>
@@ -698,13 +698,13 @@ QProgressBar#identificationProgressBar::chunk {
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit"/>
+              <widget class="QLineEdit" name="rsLineEdit"/>
              </item>
              <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_2"/>
+              <widget class="QLineEdit" name="ldLineEdit"/>
              </item>
              <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_3"/>
+              <widget class="QLineEdit" name="lqLineEdit"/>
              </item>
             </layout>
            </widget>
@@ -735,7 +735,7 @@ QProgressBar#identificationProgressBar::chunk {
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_9">
             <item>
-             <widget class="QPushButton" name="applyParametersButton_2">
+             <widget class="QPushButton" name="applyParametersButton">
               <property name="text">
                <string>Apply Parameters</string>
               </property>
@@ -757,7 +757,7 @@ QProgressBar#identificationProgressBar::chunk {
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>
