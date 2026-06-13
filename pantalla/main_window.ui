@@ -114,7 +114,7 @@ QProgressBar#identificationProgressBar::chunk {
       <property name="title">
        <string>Main Area</string>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,4,2">
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,4,0">
        <item>
         <widget class="QGroupBox" name="groupBox_5">
          <property name="title">
@@ -170,7 +170,7 @@ QProgressBar#identificationProgressBar::chunk {
              <item row="2" column="0">
               <widget class="QLabel" name="label_3">
                <property name="text">
-                <string>PWM Frequency</string>
+                <string>Speed Limit</string>
                </property>
               </widget>
              </item>
@@ -183,14 +183,14 @@ QProgressBar#identificationProgressBar::chunk {
                 </size>
                </property>
                <property name="suffix">
-                <string> kHz</string>
+                <string> rpm</string>
                </property>
               </widget>
              </item>
              <item row="3" column="0">
               <widget class="QLabel" name="label_4">
                <property name="text">
-                <string>Control Frequency</string>
+                <string>Pole Pairs (PP)</string>
                </property>
               </widget>
              </item>
@@ -203,7 +203,7 @@ QProgressBar#identificationProgressBar::chunk {
                 </size>
                </property>
                <property name="suffix">
-                <string> kHz</string>
+                <string> </string>
                </property>
               </widget>
              </item>
@@ -213,7 +213,7 @@ QProgressBar#identificationProgressBar::chunk {
           <item>
            <widget class="QGroupBox" name="groupBox_8">
             <property name="title">
-             <string>Inverter Putput</string>
+             <string>Inverter Output</string>
             </property>
             <layout class="QFormLayout" name="formLayout_2">
              <item row="0" column="0">
@@ -372,7 +372,7 @@ QProgressBar#identificationProgressBar::chunk {
                 </size>
                </property>
                <property name="suffix">
-                <string> ºC</string>
+                <string> Ω</string>
                </property>
               </widget>
              </item>
@@ -716,21 +716,32 @@ QProgressBar#identificationProgressBar::chunk {
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
-              <widget class="QPushButton" name="applyParametersButton">
+              <widget class="QPushButton" name="startIdentificationButton">
                <property name="text">
-                <string>Apply Parameters</string>
+                <string>Start</string>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="stopIdentificationButton">
                <property name="text">
-                <string>Stop Identification</string>
+                <string>Stop</string>
                </property>
               </widget>
              </item>
             </layout>
            </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QPushButton" name="applyParametersButton_2">
+              <property name="text">
+               <string>Apply Parameters</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>
