@@ -129,7 +129,7 @@ class InversorSimulado:
             Valor objectiu del mode seleccionat.
         """
         if not self.connectat:
-            raise RuntimeError("L'inversor no està connectat.")
+            raise RuntimeError("The inverter is not connected.")
 
         self.mode = mode
         self.valor_objectiu = max(0.0, valor_objectiu)
@@ -147,7 +147,7 @@ class InversorSimulado:
         Inicia la rutina d'identificació.
         """
         if not self.connectat:
-            raise RuntimeError("Cal conectar l'inversor abans d'identificar.")
+            raise RuntimeError("You need to connect the inverter before identification.")
 
         self.identificant = True
         self.progres_identificacio = 0
@@ -168,7 +168,7 @@ class InversorSimulado:
             Diccionari actualitzat de paràmetres.
         """
         if self.parametres_estimats.rs_mohm <= 0.0:
-            raise RuntimeError("Encara no hi ha resultats d'identificació.")
+            raise RuntimeError("There are still no identification results.")
 
         self.parametres["current_kp"] = round(self.parametres_estimats.ld_uH / 100.0, 2)
         self.parametres["current_ki"] = round(self.parametres_estimats.rs_mohm * 3.0, 2)
