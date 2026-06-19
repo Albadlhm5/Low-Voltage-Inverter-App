@@ -13,6 +13,74 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/* --------------------------------------------------------- */
+/* FONDO GENERAL VENTANA PRINCIPAL                */
+/* --------------------------------------------------------- */
+QMainWindow {
+    background-color: #F5F7FA;
+}
+
+/* --------------------------------------------------------- */
+/* ESTILO GENERAL DE LOS GROUPBOX                      */
+/* Cambio de:
+   - color de fondo de los bloques
+   - borde
+   - esquinas redondeadas
+   - color del título
+*/
+/* --------------------------------------------------------- */
+QGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E1EA;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #1F4E79;
+}
+
+/* --------------------------------------------------------- */
+/* TÍTULO DE LOS GROUPBOX                                    */
+/* Posición y espacio del título */
+/* --------------------------------------------------------- */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 4px 0 4px;
+}
+
+/* --------------------------------------------------------- */
+/* ESTILO DE CAJAS DE ENTRADA                                */
+/* Afecta a:
+   - QDoubleSpinBox
+   - QSpinBox
+   - QComboBox
+   - QLineEdit
+   - QPlainTextEdit
+
+   Cambio de:
+   - fondo blanco
+   - borde gris suave
+   - esquinas redondeadas
+   - color del texto
+*/
+/* --------------------------------------------------------- */
+QDoubleSpinBox, QSpinBox, QComboBox, QLineEdit, QPlainTextEdit {
+    background-color: #FFFFFF;
+    border: 1px solid #C8D2DC;
+    border-radius: 6px;
+    padding: 4px 6px;
+    color: #2F3A45;
+}
+
+/* --------------------------------------------------------- */
+/* EFECTO CUANDO HACES CLIC EN UNA CAJA                      */
+/* Cambia el borde al seleccionar el widget                  */
+/* --------------------------------------------------------- */
+QDoubleSpinBox:focus, QSpinBox:focus, QComboBox:focus, QLineEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid #5AA9E6;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">QPushButton {
