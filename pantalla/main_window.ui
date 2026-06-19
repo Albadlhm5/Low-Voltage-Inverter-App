@@ -79,103 +79,201 @@ QDoubleSpinBox, QSpinBox, QComboBox, QLineEdit, QPlainTextEdit {
 /* --------------------------------------------------------- */
 QDoubleSpinBox:focus, QSpinBox:focus, QComboBox:focus, QLineEdit:focus, QPlainTextEdit:focus {
     border: 1px solid #5AA9E6;
-}</string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    background-color: #f3f4f6;
-    color: #1f2937;
-    border: 1px solid #d1d5db;
-    border-radius: 7px;
-    padding: 1px 6px;
+}
+
+/* --------------------------------------------------------- */
+/* BLOQUES PRINCIPALES                                       */
+/* Parameters / Monitoring / Identification                  */
+/* --------------------------------------------------------- */
+QGroupBox#parametersGroupBox,
+QGroupBox#monitoringGroupBox,
+QGroupBox#identificationGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #C9D5E2;
+    border-radius: 10px;
+    margin-top: 12px;
+    font-weight: 700;
+    color: #1F4E79;
+}
+
+/* --------------------------------------------------------- */
+/* TÍTULOS DE LOS BLOQUES PRINCIPALES                        */
+/* --------------------------------------------------------- */
+QGroupBox#parametersGroupBox::title,
+QGroupBox#monitoringGroupBox::title,
+QGroupBox#identificationGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 5px 0 5px;
+}
+
+
+/* --------------------------------------------------------- */
+/* ESTILO BASE DE TODOS LOS BOTONES                          */
+/* Más compactos y técnicos                                  */
+/* --------------------------------------------------------- */
+QPushButton {
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-weight: 600;
     min-height: 22px;
-    font-weight: 500;
+    background-color: #FFFFFF;
+    border: 1px solid #C8D2DC;
+    color: #44515E;
 }
 
-QPushButton:hover {
-    background-color: #e5e7eb;
-}
-
-QPushButton:pressed {
-    background-color: #d1d5db;
-}
-
-/* BOTONES AZULES */
+/* --------------------------------------------------------- */
+/* BOTONES AZULES - acciones principales                     */
+/* Connect / Start / Run                                     */
+/* --------------------------------------------------------- */
 QPushButton#connectButton,
 QPushButton#startButton,
+QPushButton#runButton,
 QPushButton#startIdentificationButton {
-    background-color: #bfe9f5;
-    color: #0f172a;
-    border: 1px solid #8fd3e8;
+    background-color: #DCEEFF;
+    border: 1px solid #5AA9E6;
+    color: #1F5F99;
 }
 
 QPushButton#connectButton:hover,
 QPushButton#startButton:hover,
+QPushButton#runButton:hover,
 QPushButton#startIdentificationButton:hover {
-    background-color: #a9dfef;
+    background-color: #CFE7FF;
 }
 
 QPushButton#connectButton:pressed,
 QPushButton#startButton:pressed,
+QPushButton#runButton:pressed,
 QPushButton#startIdentificationButton:pressed {
-    background-color: #93d4e8;
+    background-color: #BDDFFF;
 }
 
-/* BOTONES ROJOS PASTEL */
+/* --------------------------------------------------------- */
+/* BOTONES ROJOS - acciones de parar o desconectar           */
+/* Stop / Disconnect                                         */
+/* --------------------------------------------------------- */
 QPushButton#disconnectButton,
 QPushButton#stopButton,
+QPushButton#stopModeButton,
 QPushButton#stopIdentificationButton {
-    background-color: #f8c7c7;
-    color: #7f1d1d;
-    border: 1px solid #efb0b0;
+    background-color: #FDE2E2;
+    border: 1px solid #E57373;
+    color: #B23A3A;
 }
 
 QPushButton#disconnectButton:hover,
 QPushButton#stopButton:hover,
+QPushButton#stopModeButton:hover,
 QPushButton#stopIdentificationButton:hover {
-    background-color: #f5b6b6;
+    background-color: #FAD4D4;
 }
 
 QPushButton#disconnectButton:pressed,
 QPushButton#stopButton:pressed,
+QPushButton#stopModeButton:pressed,
 QPushButton#stopIdentificationButton:pressed {
-    background-color: #eea4a4;
+    background-color: #F6C1C1;
 }
 
-/* BOTONES GRISES ELEGANTES */
+/* --------------------------------------------------------- */
+/* BOTONES NEUTROS - acciones secundarias                    */
+/* Defaults / Export / Apply Parameters                      */
+/* --------------------------------------------------------- */
 QPushButton#defaultsButton,
 QPushButton#exportButton,
 QPushButton#applyParametersButton {
-    background-color: #f5f5f5;
-    color: #374151;
-    border: 1px solid #d6d6d6;
+    background-color: #FFFFFF;
+    border: 1px solid #BFCAD6;
+    color: #44515E;
 }
 
 QPushButton#defaultsButton:hover,
 QPushButton#exportButton:hover,
 QPushButton#applyParametersButton:hover {
-    background-color: #ebebeb;
+    background-color: #F6F9FC;
 }
 
 QPushButton#defaultsButton:pressed,
 QPushButton#exportButton:pressed,
 QPushButton#applyParametersButton:pressed {
-    background-color: #dfdfdf;
-}
-QProgressBar#identificationProgressBar {
-    background-color: #f1f5f4;
-    border: 1px solid #d8e1df;
-    border-radius: 8px;
-    min-height: 12px;
-    max-height: 12px;
+    background-color: #EAF0F5;
 }
 
-QProgressBar#identificationProgressBar::chunk {
-    background-color: #a8e6b0;
-    border-radius: 8px;
+
+/* --------------------------------------------------------- */
+/* BARRA DE PROGRESO         */
+/* --------------------------------------------------------- */
+
+/* --------------------------------------------------------- */
+/* PARTE EXTERIOR DE LA BARRA                                */
+/* Cambia:
+   - color de fondo de la barra vacía
+   - borde exterior
+   - esquinas redondeadas
+   - altura de la barra
+   - color del texto del porcentaje
+*/
+/* --------------------------------------------------------- */
+QProgressBar {
+    background-color: #EEF3F7;
+    border: 1px solid #D6E0EA;
+    border-radius: 7px;
+    text-align: center;
+    color: #3A4A5A;
+    min-height: 18px;
+    max-height: 18px;
+}
+
+/* --------------------------------------------------------- */
+/* PARTE RELLENA DE LA BARRA                                 */
+/* Cambia:
+   - color azul pastel del progreso
+   - redondeo interior
+   - margen para que no toque el borde exterior
+*/
+/* --------------------------------------------------------- */
+QProgressBar::chunk {
+    background-color: #A9D6FF;
+    border-radius: 6px;
+    margin: 1px;
+}
+
+
+/* --------------------------------------------------------- */
+/* LOG - ESTILO                                 */
+/* Este bloque cambia el aspecto del QPlainTextEdit del log  */
+/* --------------------------------------------------------- */
+
+/* --------------------------------------------------------- */
+/* CAJA DEL LOG                                              */
+/* Cambia:
+   - fondo del log
+   - borde
+   - esquinas redondeadas
+   - color del texto
+   - tipo de letra más técnico
+*/
+/* --------------------------------------------------------- */
+QPlainTextEdit {
+    background-color: #F3F7FA;
+    border: 1px solid #D3DDE7;
+    border-radius: 6px;
+    color: #334455;
+    padding: 6px;
+    font-family: &quot;Consolas&quot;;
+    font-size: 10pt;
+}
+
+/* --------------------------------------------------------- */
+/* LOG                         */
+/* Cambia el borde al hacer clic dentro del log              */
+/* --------------------------------------------------------- */
+QPlainTextEdit:focus {
+    border: 1px solid #8CBFE8;
 }</string>
-   </property>
+  </property>
+  <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QGroupBox" name="groupBox_2">
@@ -184,11 +282,26 @@ QProgressBar#identificationProgressBar::chunk {
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,4,0">
        <item>
-        <widget class="QGroupBox" name="groupBox_5">
+        <widget class="QGroupBox" name="parametersGroupBox">
          <property name="title">
           <string>Parameters</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>12</number>
+          </property>
+          <property name="topMargin">
+           <number>12</number>
+          </property>
+          <property name="rightMargin">
+           <number>12</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
           <item>
            <widget class="QGroupBox" name="groupBox_9">
             <property name="title">
@@ -481,11 +594,26 @@ QProgressBar#identificationProgressBar::chunk {
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_4">
+        <widget class="QGroupBox" name="monitoringGroupBox">
          <property name="title">
           <string>Monitoring</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,5,1,2">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>12</number>
+          </property>
+          <property name="topMargin">
+           <number>12</number>
+          </property>
+          <property name="rightMargin">
+           <number>12</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
           <item>
            <widget class="QGroupBox" name="groupBox_13">
             <property name="title">
@@ -658,11 +786,26 @@ QProgressBar#identificationProgressBar::chunk {
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_3">
+        <widget class="QGroupBox" name="identificationGroupBox">
          <property name="title">
           <string>Identification</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>12</number>
+          </property>
+          <property name="topMargin">
+           <number>12</number>
+          </property>
+          <property name="rightMargin">
+           <number>12</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
           <item>
            <widget class="QGroupBox" name="groupBox_15">
             <property name="title">

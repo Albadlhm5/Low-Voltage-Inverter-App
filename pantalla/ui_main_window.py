@@ -93,114 +93,220 @@ class Ui_MainWindow(object):
 "/* --------------------------------------------------------- */\n"
 "QDoubleSpinBox:focus, QSpinBox:focus, QComboBox:focus, QLineEdit:focus, QPlainTextEdit:focus {\n"
 "    border: 1px solid #5AA9E6;\n"
-"}")
-        self.centralwidget = QWidget(MainWindow)
-        self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setStyleSheet(u"QPushButton {\n"
-"    background-color: #f3f4f6;\n"
-"    color: #1f2937;\n"
-"    border: 1px solid #d1d5db;\n"
-"    border-radius: 7px;\n"
-"    padding: 1px 6px;\n"
+"}\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* BLOQUES PRINCIPALES                                       */\n"
+"/* Parameters / Monitoring / Identification                  */\n"
+"/* --------------------------------------------------------- */\n"
+"QGroupBox#parametersGroupBox,\n"
+"QGroupBox#monitoringGroupBox,\n"
+"QGroupBox#identificationGroupBox {\n"
+"    background-color: #FFFFFF;\n"
+"    border: 1px solid #C9D5E2;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 12px;\n"
+"    font-weight: 700;\n"
+"    color: #1F4E79;\n"
+"}\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* T\u00cdTULOS DE LOS BLOQUES PRINCIPALES                        */\n"
+"/* --------------------------------------------------------- */\n"
+"QGroupBox#parametersGrou"
+                        "pBox::title,\n"
+"QGroupBox#monitoringGroupBox::title,\n"
+"QGroupBox#identificationGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    left: 12px;\n"
+"    padding: 0 5px 0 5px;\n"
+"}\n"
+"\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* ESTILO BASE DE TODOS LOS BOTONES                          */\n"
+"/* M\u00e1s compactos y t\u00e9cnicos                                  */\n"
+"/* --------------------------------------------------------- */\n"
+"QPushButton {\n"
+"    border-radius: 6px;\n"
+"    padding: 4px 10px;\n"
+"    font-weight: 600;\n"
 "    min-height: 22px;\n"
-"    font-weight: 500;\n"
+"    background-color: #FFFFFF;\n"
+"    border: 1px solid #C8D2DC;\n"
+"    color: #44515E;\n"
 "}\n"
 "\n"
-"QPushButton:hover {\n"
-"    background-color: #e5e7eb;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #d1d5db;\n"
-"}\n"
-"\n"
-"/* BOTONES AZULES */\n"
+"/* --------------------------------------------------------- */\n"
+"/* BOTONES AZULES - acciones principales                     */\n"
+"/* Connect / Start / Run                                     */\n"
+"/* --------------------------------------------------------- */\n"
 "QPushButton#connectButton,\n"
-"QPushButton#startButton,\n"
+"QPush"
+                        "Button#startButton,\n"
+"QPushButton#runButton,\n"
 "QPushButton#startIdentificationButton {\n"
-"    background-color: #bfe9f5;\n"
-"    color: #0f172a;\n"
-"    border: 1px solid #8fd3e8;\n"
+"    background-color: #DCEEFF;\n"
+"    border: 1px solid #5AA9E6;\n"
+"    color: #1F5F99;\n"
 "}\n"
 "\n"
 "QPushButton#connectButton:hover,\n"
 "QPushButton#startButton:hover,\n"
+"QPushButton#runButton:hover,\n"
 "QPushButton#startIdentificationButton:hover {\n"
-"    background-color: #a9dfef;\n"
+"    background-color: #CFE7FF;\n"
 "}\n"
 "\n"
 "QPushButton#connectButton:pressed,\n"
 "QPushButton#startButton:pressed,\n"
+"QPushButton#runButton:pressed,\n"
 "QPushButton#startIdentificationButton:pressed {\n"
-"    background-color: #93d4e8;\n"
+"    background-color: #BDDFFF;\n"
 "}\n"
 "\n"
-"/* BOTONES ROJOS PASTEL */\n"
+"/* --------------------------------------------------------- */\n"
+"/* BOTONES ROJOS - acciones de parar o desconectar           */\n"
+"/* Stop / Disconnect                                         */\n"
+"/* --------------------------------------------------------- */\n"
 "QPushButton#disconnectButton,\n"
-"QPushButton#s"
-                        "topButton,\n"
+"QPushButton#stopButton,\n"
+"QPushButton#stopModeButton,\n"
 "QPushButton#stopIdentificationButton {\n"
-"    background-color: #f8c7c7;\n"
-"    color: #7f1d1d;\n"
-"    border: 1px solid #efb0b0;\n"
+"    ba"
+                        "ckground-color: #FDE2E2;\n"
+"    border: 1px solid #E57373;\n"
+"    color: #B23A3A;\n"
 "}\n"
 "\n"
 "QPushButton#disconnectButton:hover,\n"
 "QPushButton#stopButton:hover,\n"
+"QPushButton#stopModeButton:hover,\n"
 "QPushButton#stopIdentificationButton:hover {\n"
-"    background-color: #f5b6b6;\n"
+"    background-color: #FAD4D4;\n"
 "}\n"
 "\n"
 "QPushButton#disconnectButton:pressed,\n"
 "QPushButton#stopButton:pressed,\n"
+"QPushButton#stopModeButton:pressed,\n"
 "QPushButton#stopIdentificationButton:pressed {\n"
-"    background-color: #eea4a4;\n"
+"    background-color: #F6C1C1;\n"
 "}\n"
 "\n"
-"/* BOTONES GRISES ELEGANTES */\n"
+"/* --------------------------------------------------------- */\n"
+"/* BOTONES NEUTROS - acciones secundarias                    */\n"
+"/* Defaults / Export / Apply Parameters                      */\n"
+"/* --------------------------------------------------------- */\n"
 "QPushButton#defaultsButton,\n"
 "QPushButton#exportButton,\n"
 "QPushButton#applyParametersButton {\n"
-"    background-color: #f5f5f5;\n"
-"    color: #374151;\n"
-"    border: 1px solid #d6d6d6;\n"
+"    background-color: #FFFFFF;\n"
+"    border: 1px solid #BFCAD6;\n"
+"    color: #44515E;\n"
 "}\n"
 "\n"
-"QPushButton#defaultsButton:hover,\n"
+"QPushButton#defaultsButto"
+                        "n:hover,\n"
 "QPushButton#exportButton:hover,\n"
 "QPushButton#applyParametersButton:hover {\n"
-"    background-color: #ebebeb;\n"
+"    background-color: #F6F9FC;\n"
 "}\n"
 "\n"
 "QPushButton#defaultsButton:pressed,\n"
 "QPushButton#exportButton:pressed,\n"
-"QPushButton#applyParametersButto"
-                        "n:pressed {\n"
-"    background-color: #dfdfdf;\n"
-"}\n"
-"QProgressBar#identificationProgressBar {\n"
-"    background-color: #f1f5f4;\n"
-"    border: 1px solid #d8e1df;\n"
-"    border-radius: 8px;\n"
-"    min-height: 12px;\n"
-"    max-height: 12px;\n"
+"QPushButton#applyParametersButton:pressed {\n"
+"    background-color: #EAF0F5;\n"
 "}\n"
 "\n"
-"QProgressBar#identificationProgressBar::chunk {\n"
-"    background-color: #a8e6b0;\n"
-"    border-radius: 8px;\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* BARRA DE PROGRESO         */\n"
+"/* --------------------------------------------------------- */\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* PARTE EXTERIOR DE LA BARRA                                */\n"
+"/* Cambia:\n"
+"   - color de fondo de la barra vac\u00eda\n"
+"   - borde exterior\n"
+"   - esquinas redondeadas\n"
+"   - altura de la barra\n"
+"   - color del texto del porcentaje\n"
+"*/\n"
+"/* --------------------------------------------------------- */\n"
+"QProgressBar {\n"
+"    background-color: #EEF3F7;\n"
+"    border: 1px solid #D6E0EA;\n"
+"    border-radius: 7px;\n"
+"    text-align: ce"
+                        "nter;\n"
+"    color: #3A4A5A;\n"
+"    min-height: 18px;\n"
+"    max-height: 18px;\n"
+"}\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* PARTE RELLENA DE LA BARRA                                 */\n"
+"/* Cambia:\n"
+"   - color azul pastel del progreso\n"
+"   - redondeo interior\n"
+"   - margen para que no toque el borde exterior\n"
+"*/\n"
+"/* --------------------------------------------------------- */\n"
+"QProgressBar::chunk {\n"
+"    background-color: #A9D6FF;\n"
+"    border-radius: 6px;\n"
+"    margin: 1px;\n"
+"}\n"
+"\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* LOG - ESTILO                                 */\n"
+"/* Este bloque cambia el aspecto del QPlainTextEdit del log  */\n"
+"/* --------------------------------------------------------- */\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* CAJA DEL LOG                                              */\n"
+"/* Cambia:\n"
+"   - fondo del log\n"
+"   - borde\n"
+"   -"
+                        " esquinas redondeadas\n"
+"   - color del texto\n"
+"   - tipo de letra m\u00e1s t\u00e9cnico\n"
+"*/\n"
+"/* --------------------------------------------------------- */\n"
+"QPlainTextEdit {\n"
+"    background-color: #F3F7FA;\n"
+"    border: 1px solid #D3DDE7;\n"
+"    border-radius: 6px;\n"
+"    color: #334455;\n"
+"    padding: 6px;\n"
+"    font-family: \"Consolas\";\n"
+"    font-size: 10pt;\n"
+"}\n"
+"\n"
+"/* --------------------------------------------------------- */\n"
+"/* LOG                         */\n"
+"/* Cambia el borde al hacer clic dentro del log              */\n"
+"/* --------------------------------------------------------- */\n"
+"QPlainTextEdit:focus {\n"
+"    border: 1px solid #8CBFE8;\n"
 "}")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.groupBox_2 = QGroupBox(self.centralwidget)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.horizontalLayout = QHBoxLayout(self.groupBox_2)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.groupBox_5 = QGroupBox(self.groupBox_2)
-        self.groupBox_5.setObjectName(u"groupBox_5")
-        self.verticalLayout_2 = QVBoxLayout(self.groupBox_5)
+        self.parametersGroupBox = QGroupBox(self.groupBox_2)
+        self.parametersGroupBox.setObjectName(u"parametersGroupBox")
+        self.verticalLayout_2 = QVBoxLayout(self.parametersGroupBox)
+        self.verticalLayout_2.setSpacing(10)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.groupBox_9 = QGroupBox(self.groupBox_5)
+        self.verticalLayout_2.setContentsMargins(12, 12, 12, 12)
+        self.groupBox_9 = QGroupBox(self.parametersGroupBox)
         self.groupBox_9.setObjectName(u"groupBox_9")
         self.formLayout = QFormLayout(self.groupBox_9)
         self.formLayout.setObjectName(u"formLayout")
@@ -251,7 +357,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.groupBox_9)
 
-        self.groupBox_8 = QGroupBox(self.groupBox_5)
+        self.groupBox_8 = QGroupBox(self.parametersGroupBox)
         self.groupBox_8.setObjectName(u"groupBox_8")
         self.formLayout_2 = QFormLayout(self.groupBox_8)
         self.formLayout_2.setObjectName(u"formLayout_2")
@@ -302,7 +408,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.groupBox_8)
 
-        self.groupBox_7 = QGroupBox(self.groupBox_5)
+        self.groupBox_7 = QGroupBox(self.parametersGroupBox)
         self.groupBox_7.setObjectName(u"groupBox_7")
         self.formLayout_3 = QFormLayout(self.groupBox_7)
         self.formLayout_3.setObjectName(u"formLayout_3")
@@ -353,7 +459,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.groupBox_7)
 
-        self.groupBox_6 = QGroupBox(self.groupBox_5)
+        self.groupBox_6 = QGroupBox(self.parametersGroupBox)
         self.groupBox_6.setObjectName(u"groupBox_6")
         self.horizontalLayout_2 = QHBoxLayout(self.groupBox_6)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -376,13 +482,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.groupBox_6)
 
 
-        self.horizontalLayout.addWidget(self.groupBox_5)
+        self.horizontalLayout.addWidget(self.parametersGroupBox)
 
-        self.groupBox_4 = QGroupBox(self.groupBox_2)
-        self.groupBox_4.setObjectName(u"groupBox_4")
-        self.verticalLayout_3 = QVBoxLayout(self.groupBox_4)
+        self.monitoringGroupBox = QGroupBox(self.groupBox_2)
+        self.monitoringGroupBox.setObjectName(u"monitoringGroupBox")
+        self.verticalLayout_3 = QVBoxLayout(self.monitoringGroupBox)
+        self.verticalLayout_3.setSpacing(10)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.groupBox_13 = QGroupBox(self.groupBox_4)
+        self.verticalLayout_3.setContentsMargins(12, 12, 12, 12)
+        self.groupBox_13 = QGroupBox(self.monitoringGroupBox)
         self.groupBox_13.setObjectName(u"groupBox_13")
         self.verticalLayout_4 = QVBoxLayout(self.groupBox_13)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
@@ -417,7 +525,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.groupBox_13)
 
-        self.groupBox_12 = QGroupBox(self.groupBox_4)
+        self.groupBox_12 = QGroupBox(self.monitoringGroupBox)
         self.groupBox_12.setObjectName(u"groupBox_12")
         self.verticalLayout_5 = QVBoxLayout(self.groupBox_12)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
@@ -431,7 +539,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.groupBox_12)
 
-        self.groupBox_11 = QGroupBox(self.groupBox_4)
+        self.groupBox_11 = QGroupBox(self.monitoringGroupBox)
         self.groupBox_11.setObjectName(u"groupBox_11")
         self.horizontalLayout_3 = QHBoxLayout(self.groupBox_11)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
@@ -453,7 +561,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.groupBox_11)
 
-        self.groupBox_10 = QGroupBox(self.groupBox_4)
+        self.groupBox_10 = QGroupBox(self.monitoringGroupBox)
         self.groupBox_10.setObjectName(u"groupBox_10")
         self.verticalLayout_6 = QVBoxLayout(self.groupBox_10)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
@@ -470,13 +578,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setStretch(2, 1)
         self.verticalLayout_3.setStretch(3, 2)
 
-        self.horizontalLayout.addWidget(self.groupBox_4)
+        self.horizontalLayout.addWidget(self.monitoringGroupBox)
 
-        self.groupBox_3 = QGroupBox(self.groupBox_2)
-        self.groupBox_3.setObjectName(u"groupBox_3")
-        self.verticalLayout_7 = QVBoxLayout(self.groupBox_3)
+        self.identificationGroupBox = QGroupBox(self.groupBox_2)
+        self.identificationGroupBox.setObjectName(u"identificationGroupBox")
+        self.verticalLayout_7 = QVBoxLayout(self.identificationGroupBox)
+        self.verticalLayout_7.setSpacing(10)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.groupBox_15 = QGroupBox(self.groupBox_3)
+        self.verticalLayout_7.setContentsMargins(12, 12, 12, 12)
+        self.groupBox_15 = QGroupBox(self.identificationGroupBox)
         self.groupBox_15.setObjectName(u"groupBox_15")
         self.verticalLayout_8 = QVBoxLayout(self.groupBox_15)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
@@ -519,7 +629,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.groupBox_15)
 
-        self.groupBox_16 = QGroupBox(self.groupBox_3)
+        self.groupBox_16 = QGroupBox(self.identificationGroupBox)
         self.groupBox_16.setObjectName(u"groupBox_16")
         self.verticalLayout_10 = QVBoxLayout(self.groupBox_16)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
@@ -537,7 +647,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.groupBox_16)
 
-        self.groupBox_17 = QGroupBox(self.groupBox_3)
+        self.groupBox_17 = QGroupBox(self.identificationGroupBox)
         self.groupBox_17.setObjectName(u"groupBox_17")
         self.formLayout_4 = QFormLayout(self.groupBox_17)
         self.formLayout_4.setObjectName(u"formLayout_4")
@@ -574,7 +684,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.groupBox_17)
 
-        self.groupBox_14 = QGroupBox(self.groupBox_3)
+        self.groupBox_14 = QGroupBox(self.identificationGroupBox)
         self.groupBox_14.setObjectName(u"groupBox_14")
         self.horizontalLayout_4 = QHBoxLayout(self.groupBox_14)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -593,7 +703,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9 = QVBoxLayout()
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.applyParametersButton = QPushButton(self.groupBox_3)
+        self.applyParametersButton = QPushButton(self.identificationGroupBox)
         self.applyParametersButton.setObjectName(u"applyParametersButton")
 
         self.verticalLayout_9.addWidget(self.applyParametersButton)
@@ -602,7 +712,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.addLayout(self.verticalLayout_9)
 
 
-        self.horizontalLayout.addWidget(self.groupBox_3)
+        self.horizontalLayout.addWidget(self.identificationGroupBox)
 
         self.horizontalLayout.setStretch(0, 2)
         self.horizontalLayout.setStretch(1, 4)
@@ -626,7 +736,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Main Area", None))
-        self.groupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Parameters", None))
+        self.parametersGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Parameters", None))
         self.groupBox_9.setTitle(QCoreApplication.translate("MainWindow", u"Inverter Input", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"DC Voltage", None))
         self.dcVoltageSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" V", None))
@@ -655,7 +765,7 @@ class Ui_MainWindow(object):
         self.connectButton.setText(QCoreApplication.translate("MainWindow", u"Connect", None))
         self.defaultsButton.setText(QCoreApplication.translate("MainWindow", u"Deafaults", None))
         self.disconnectButton.setText(QCoreApplication.translate("MainWindow", u"Disconnect", None))
-        self.groupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Monitoring", None))
+        self.monitoringGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Monitoring", None))
         self.groupBox_13.setTitle(QCoreApplication.translate("MainWindow", u"Signals", None))
         self.signal1ComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Signal 1", None))
         self.signal1ComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"DC Bus Voltage (V)", None))
@@ -683,7 +793,7 @@ class Ui_MainWindow(object):
         self.stopButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
         self.exportButton.setText(QCoreApplication.translate("MainWindow", u"Export ", None))
         self.groupBox_10.setTitle(QCoreApplication.translate("MainWindow", u"Log", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Identification", None))
+        self.identificationGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Identification", None))
         self.groupBox_15.setTitle(QCoreApplication.translate("MainWindow", u"Identification Setup", None))
         self.modeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Torque", None))
         self.modeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Speed", None))
