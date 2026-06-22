@@ -44,7 +44,7 @@ class Presenter:
 
         # Carreguem valors inicials
         self.fcarregar_defecto()
-        self._registrar_log("Aplicació preparada.")
+        self._registrar_log("Application ready.")
 
     # ------------------------------------------------------------
     # PREPARACIÓ INICIAL
@@ -94,7 +94,7 @@ class Presenter:
             parametres = self._llegir_parametres_de_la_vista()
             self.modelo.establir_parametres(parametres)
             self.modelo.conectar()
-            self._registrar_log("Inversor simulat conectat.")
+            self._registrar_log("Simulated inverter connected.")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -105,7 +105,7 @@ class Presenter:
         try:
             parametres = self.modelo.carregar_defecte()
             self._escriure_parametres_a_la_vista(parametres)
-            self._registrar_log("Paràmetres per defecte carregats.")
+            self._registrar_log("Default parameters loaded.")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -117,7 +117,7 @@ class Presenter:
         self.timer_identificacio.stop()
         self.modelo.desconectar()
         self._posar_estat_identificacio("Idle", 0)
-        self._registrar_log("Inversor desconectat.")
+        self._registrar_log("Inverter disconnected.")
 
     # ------------------------------------------------------------
     # MONITORING
@@ -129,7 +129,7 @@ class Presenter:
         """
         try:
             if not self.modelo.connectat:
-                raise RuntimeError("Cal conectar l'inversor abans d'iniciar l'stream.")
+                raise RuntimeError("You need to connect the inverter before starting the stream.")
 
             parametres = self._llegir_parametres_de_la_vista()
             self.modelo.establir_parametres(parametres)
@@ -139,7 +139,7 @@ class Presenter:
             self.y2_data.clear()
 
             self.timer_stream.start()
-            self._registrar_log("Streaming iniciat.")
+            self._registrar_log("Streaming started.")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -156,7 +156,7 @@ class Presenter:
         """
         try:
             if not self.modelo.historial:
-                raise RuntimeError("No hi ha dades per exportar.")
+                raise RuntimeError("There is no data to export.")
 
             ruta, _ = QFileDialog.getSaveFileName(
                 self.vista,
@@ -169,7 +169,7 @@ class Presenter:
                 return
 
             self.modelo.exportar_csv(ruta)
-            self._registrar_log(f"Dades exportades a: {ruta}")
+            self._registrar_log(f"Data exported to: {ruta}")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -183,7 +183,7 @@ class Presenter:
         """
         try:
             if not self.modelo.connectat:
-                raise RuntimeError("Cal conectar l'inversor abans d'executar un mode.")
+                raise RuntimeError("You need to connect the inverter before running a mode.")
 
             mode = self._widget("modeComboBox").currentText()
             valor = self._widget("modeValueSpinBox").value()
@@ -192,7 +192,7 @@ class Presenter:
             self.modelo.establir_parametres(parametres)
             self.modelo.executar_mode(mode, valor)
 
-            self._registrar_log(f"RUN activat. Mode={mode}, valor={valor}")
+            self._registrar_log(f"RUN activated. Mode={mode}, valor={valor}")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -201,7 +201,7 @@ class Presenter:
         Atura el mode actiu del bloc superior dret.
         """
         self.modelo.parar_mode()
-        self._registrar_log("STOP del mode executat.")
+        self._registrar_log("Mode stopped.")
 
     # ------------------------------------------------------------
     # IDENTIFICATION ACTIONS
@@ -215,7 +215,7 @@ class Presenter:
             self.modelo.iniciar_identificacio()
             self.timer_identificacio.start()
             self._posar_estat_identificacio("Running...", 0)
-            self._registrar_log("Identificació iniciada.")
+            self._registrar_log("Identification started.")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -226,7 +226,7 @@ class Presenter:
         self.modelo.parar_identificacio()
         self.timer_identificacio.stop()
         self._posar_estat_identificacio("Stopped", 0)
-        self._registrar_log("Identificació aturada.")
+        self._registrar_log("Identification stopped.")
 
     def faplicar_parametros(self):
         """
@@ -235,7 +235,7 @@ class Presenter:
         try:
             parametres = self.modelo.aplicar_parametres_identificats()
             self._escriure_parametres_a_la_vista(parametres)
-            self._registrar_log("Paràmetres identificats aplicats.")
+            self._registrar_log("Identified parameters applied.")
         except Exception as e:
             self._registrar_log(f"ERROR: {e}")
 
@@ -280,7 +280,7 @@ class Presenter:
         if progres >= 100:
             self.timer_identificacio.stop()
             self._escriure_parametres_estimats()
-            self._registrar_log("Identificació completada.")
+            self._registrar_log("Identification completed.")
 
     # ------------------------------------------------------------
     # AUXILIARS DE LECTURA / ESCRIPTURA
@@ -372,7 +372,7 @@ class Presenter:
         """
         widget = getattr(self.ui, nom, None)
         if widget is None:
-            raise AttributeError(f"No s'ha trobat el widget: {nom}")
+            raise AttributeError(f"Widget not found: {nom}")
         return widget
 
     def _omplir_signals(self):
